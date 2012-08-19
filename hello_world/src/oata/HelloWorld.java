@@ -1,7 +1,13 @@
 package oata;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+
 public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello World");
-  }
+    static Logger logger = Logger.getLogger(HelloWorld.class);
+
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        logger.info("Hello World");
+    }
 }
